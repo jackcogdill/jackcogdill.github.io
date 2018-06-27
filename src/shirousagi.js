@@ -284,8 +284,26 @@ async function rain(_options = {}) {
   drawBackground('black');
 }
 
-export default async function shirousagi() {
+async function intro() {
   setUp();
   const message = window.isMobile ? 'HELLO THERE.' : 'OH, WHY HELLO THERE.';
   await rain({ message });
 }
+
+async function outro() {
+  const canvas = document.getElementById('introCanvas');
+
+  let iter = 100;
+  let opacity = 1;
+  const step = 1 / iter;
+  function fade() {
+    opacity -= step;
+    canvas.style.opacity = opacity;
+  }
+
+  await animate(fade, () => opacity <= 0);
+
+  document.body.removeChild(canvas);
+}
+
+export default { intro, outro };

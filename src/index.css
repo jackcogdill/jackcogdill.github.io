@@ -5,6 +5,11 @@ html, body {
   background: black;
 }
 
+#introCanvas {
+  z-index: 9999;
+  position: absolute;
+}
+
 #root {
   display: none;
 }
