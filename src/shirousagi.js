@@ -98,7 +98,7 @@ async function rain(_options = {}) {
 
   // Display Constants
   // ================================
-  const fsize = isMobile ? 48 : 14;
+  const fsize = 14;
   ctx.font = `${fsize}pt monospace`;
   const defaultBackground = 'rgba(0, 0, 0, 0.05)';
   // Spacing between glyphs
