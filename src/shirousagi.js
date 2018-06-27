@@ -47,11 +47,12 @@ function setUp() {
   window.width = window.innerWidth;
   window.height = window.innerHeight;
   window.ctx = canvas.getContext('2d');
-  window.isMobile = window.screen.width <= 768;
 
   const width = window.width;
   const height = window.height;
   const ctx = window.ctx;
+
+  window.isMobile = width <= 768;
 
   // Modify canvas to be high DPI
   // Lovingly adapted from http://stackoverflow.com/a/15666143/1313757
