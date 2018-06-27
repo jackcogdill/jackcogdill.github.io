@@ -275,13 +275,13 @@ async function rain(_options = {}) {
     });
   }
 
-  const { fps } = options;
+  const fps = height / 20;
   await animate(fall, () => numFinished === numDrops, fps);
 
   let i = 0;
   await animate(fadeBackground, () => i++ === 25, fps);
 
-  const disappearFps = fps / 2;
+  const disappearFps = 18;
   const maxSeconds = 1;
   const maxTries = maxSeconds * disappearFps;
   await animate(() => disappear(maxTries), () => numGone === numPerma, disappearFps);
