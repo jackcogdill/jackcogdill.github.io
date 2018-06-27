@@ -8,8 +8,6 @@ html, body {
 #introCanvas {
   z-index: 9999;
   position: absolute;
-  /* If you change the time, also change it in shirousagi.js */
-  transition: opacity 1s ease-in-out;
 }
 
 #root {

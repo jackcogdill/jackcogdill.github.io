@@ -297,8 +297,13 @@ async function intro() {
 
 async function outro() {
   const canvas = document.getElementById('introCanvas');
+
+  // Fade
+  const seconds = 1;
+  canvas.style.transition = `opacity ${seconds}s ease-in-out`;
   canvas.style.opacity = 0;
-  await sleep(1000); // CSS transition is set to 1 second
+  await sleep(seconds * 1000);
+
   document.body.removeChild(canvas);
 }
 
