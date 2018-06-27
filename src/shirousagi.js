@@ -86,7 +86,7 @@ async function rain(message) {
   // Misc constants
   // ================================
   const alpha = '0123456789ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ';
-  const hex = '0123456789ABCDEF';
+  const upper = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   // Colors
   const normal = '#5CFF5C';
   const brightA = '#8F8';
@@ -221,7 +221,7 @@ async function rain(message) {
   }
 
   function fadeBackground() {
-    drawBackground();
+    drawBackground('rgba(0, 0, 0, 0.1)');
     ctx.fillStyle = normal;
 
     drops.forEach(({ y, perma }, i) => {
@@ -233,35 +233,32 @@ async function rain(message) {
     });
   }
 
-  let numGone = 0;
+  let numDisappeared = 0;
   let tries = 0;
   function disappear(maxTries) {
     tries++;
-    drawBackground('rgba(0, 0, 0, 0.5)');
+    drawBackground('black');
     ctx.fillStyle = normal;
 
     drops = drops.map(({ y, perma, done, char }, i) => {
-      if (!perma) return { perma };
-
-      let gone = !done;
-      if (!gone) {
+      if (perma && !done) {
         if (char === undefined) {
           char = message.charAt(i - textLeft);
         }
-        if (Math.random() > 0.75) {
-          char = choice(hex);
+        if (Math.random() > 0.97) {
+          char = choice(upper);
         }
-
         const x = padding + i * glyphW;
         ctx.fillText(char, x, y);
 
         // Kill if it's taking too long
         if (Math.random() > 0.90 || tries > maxTries) {
-          gone = true;
-          numGone++;
+          done = true;
+          numDisappeared++;
         }
       }
-      return { y, perma, done: !gone, char };
+
+      return { y, perma, done, char };
     });
   }
 
@@ -269,12 +266,14 @@ async function rain(message) {
   await animate(fall, () => numFinished === numDrops, fps);
 
   let i = 0;
-  await animate(fadeBackground, () => i++ === 25, fps);
+  await animate(fadeBackground, () => i++ === 35, fps);
 
+  // Reuse `done` variable
+  drops = drops.map(({ y, perma }) => ({ y, perma, done: false }));
   const disappearFps = 18;
   const maxSeconds = 1;
   const maxTries = maxSeconds * disappearFps;
-  await animate(() => disappear(maxTries), () => numGone === numPerma, disappearFps);
+  await animate(() => disappear(maxTries), () => numDisappeared === numPerma, disappearFps);
 
   drawBackground('black');
 }
