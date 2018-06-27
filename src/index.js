@@ -6,7 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import Shirousagi from './shirousagi';
 
 (async () => {
-  // Intro
   await Shirousagi.intro();
 
   // Start React
@@ -15,6 +14,5 @@ import Shirousagi from './shirousagi';
   ReactDOM.render(<App />, root);
   registerServiceWorker();
 
-  // End intro
-  await Shirousagi.outro();
+  Shirousagi.outro();
 })();

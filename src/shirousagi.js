@@ -5,7 +5,7 @@ const randInt = (min, max) => min + Math.floor(Math.random() * (max - min));
 const choice = str => str.charAt(randInt(0, str.length));
 
 function animate(innerFunction, baseCase, fps) {
-  if (fps) {
+  if (fps && fps < 60) {
     const fpsInterval = 1000 / fps;
     let then = Date.now();
     let done = false;
@@ -76,27 +76,18 @@ function setUp() {
   ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 }
 
-async function rain(_options = {}) {
+async function rain(message) {
   // Global vars
   // ================================
   const width = window.width;
   const height = window.height;
   const ctx = window.ctx;
-  const isMobile = window.isMobile;
 
-  // Options
+  // Misc constants
   // ================================
-  const defaults = {
-    message: 'H3110, W0R1D',
-    fps: isMobile ? 30 : 35,
-  };
-  const options = Object.assign({}, defaults, _options);
-
   const alpha = '0123456789ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ';
   const hex = '0123456789ABCDEF';
-
   // Colors
-  // ================================
   const normal = '#5CFF5C';
   const brightA = '#8F8';
   const brightB = '#AFA';
@@ -115,7 +106,6 @@ async function rain(_options = {}) {
 
   // Initialization Variables
   // ================================
-  const { message } = options;
   let numDrops = Math.floor(width / glyphW);
   // Both 'numDrops' and 'message.length' must be either even or odd to easily center
   if ((numDrops + message.length) & 1) {
@@ -291,8 +281,8 @@ async function rain(_options = {}) {
 
 async function intro() {
   setUp();
-  const message = window.isMobile ? 'HELLO THERE.' : 'OH, WHY HELLO THERE.';
-  await rain({ message });
+  const message = window.isMobile ? 'HELLO THERE' : 'OH, WHY HELLO THERE';
+  await rain(message);
 }
 
 async function outro() {
