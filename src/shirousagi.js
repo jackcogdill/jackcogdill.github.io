@@ -39,6 +39,10 @@ function animate(innerFunction, baseCase, fps) {
   }
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Main functions
 // ================================
 function setUp() {
@@ -293,17 +297,8 @@ async function intro() {
 
 async function outro() {
   const canvas = document.getElementById('introCanvas');
-
-  let iter = 100;
-  let opacity = 1;
-  const step = 1 / iter;
-  function fade() {
-    opacity -= step;
-    canvas.style.opacity = opacity;
-  }
-
-  await animate(fade, () => opacity <= 0);
-
+  canvas.style.opacity = 0;
+  await sleep(1000); // CSS transition is set to 1 second
   document.body.removeChild(canvas);
 }
 
