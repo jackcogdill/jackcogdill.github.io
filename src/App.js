@@ -2,7 +2,33 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      width: window.innerWidth,
+    };
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  // Thank you https://goshakkk.name/different-mobile-desktop-tablet-layouts-react/
+  handleResize = () => {
+    this.setState({
+      width: window.innerWidth,
+    });
+  }
+
   render() {
+    const { width } = this.state;
+    const isMobile = width <= 768;
+
     return (
       <div className="App">
         <header className="header">
@@ -15,7 +41,7 @@ class App extends Component {
           </p>
         </div>
         <footer className="footer">
-          <span>Jack Cogdill</span>
+          { !isMobile && <span>Jack Cogdill</span>}
           <div className="footer-links">
             <a href="mailto:jackcog@vt.edu" target="_blank" rel="noopener noreferrer">Email</a>
             <a href="https://github.com/jackcogdill" target="_blank" rel="noopener noreferrer">Github</a>
