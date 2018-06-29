@@ -2,12 +2,16 @@
   "name": "jackcogdill.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jackcogdill.github.io/",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "serve -s build",
