@@ -1,5 +1,9 @@
-# jackcogdill.github.io-Redux
-Recoding of http://jackcogdill.github.io/
+# jackcogdill.github.io
+v2.0
+
+## Credits
+
+Favicon created with [favicon.io](https://favicon.io/).
 
 ## Todo
 
@@ -7,7 +11,3 @@ Recoding of http://jackcogdill.github.io/
 - [ ] Abstract links to a component
 - [ ] Abstract header, footer, and content
 - [ ] Use Sass
-
-## Credits
-
-Favicon created with [favicon.io](https://favicon.io/).
