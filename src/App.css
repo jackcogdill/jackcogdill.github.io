@@ -14,12 +14,12 @@ a:visited {
 }
 
 a:hover {
-  color: yellow;
+  color: #4717F6;
 }
 
 ::selection {
   background: rgba(0, 0, 0, 0.5);
-  color: yellow;
+  color: #4717F6;
 }
 
 .App {
