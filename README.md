@@ -1,2 +1,2 @@
-# jackcogdill.github.io-Redux
-Recoding of http://jackcogdill.github.io/
+# jackcogdill.github.io
+v2.0
