@@ -11,3 +11,9 @@ Favicon created with [favicon.io](https://favicon.io/).
 - [ ] Abstract links to a component
 - [ ] Abstract header, footer, and content
 - [ ] Use Sass
+
+- [ ] Add projects
+- [ ] Add codepen
+- [ ] Slow scrolling background (use Rellax?)
+    - [ ] Photo?
+    - [ ] Black and white vs Tint pink
