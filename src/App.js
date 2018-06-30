@@ -32,9 +32,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="header">
-          <h1 className="header-title">My name is Jack Cogdill.</h1>
+          <h1 className="header-title">Hi! I'm Jack.</h1>
           <h2 className="header-description">
-            I'm a student at <a href="https://vt.edu/">Virginia Tech</a> studying Computer Science.
+            I'm a student at <a href="https://vt.edu/">Virginia Tech</a> studying Computer Science and Japanese.
           </h2>
         </header>
         <div className="content">
