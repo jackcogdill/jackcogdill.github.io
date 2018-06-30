@@ -33,7 +33,9 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <h1 className="header-title">My name is Jack Cogdill.</h1>
-          <h2 className="header-description">I'm a student at <a href="https://vt.edu/" target="_blank" rel="noopener noreferrer">Virginia Tech</a> studying Computer Science.</h2>
+          <h2 className="header-description">
+            I'm a student at <a href="https://vt.edu/">Virginia Tech</a> studying Computer Science.
+          </h2>
         </header>
         <div className="content">
           <p className="intro">
@@ -41,12 +43,12 @@ class App extends Component {
           </p>
         </div>
         <footer className="footer">
-          { !isMobile && <span>Jack Cogdill</span>}
+          {!isMobile && <span>Jack Cogdill</span>}
           <div className="footer-links">
-            <a href="mailto:jackcog@vt.edu" target="_blank" rel="noopener noreferrer">Email</a>
-            <a href="https://github.com/jackcogdill" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="files/cv.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <a href="https://www.instagram.com/jackcogdill/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="mailto:jackcog@vt.edu">Email</a>
+            <a href="https://github.com/jackcogdill">Github</a>
+            <a href="files/cv.pdf">Resume</a>
+            <a href="https://www.instagram.com/jackcogdill/">Instagram</a>
           </div>
         </footer>
       </div>
