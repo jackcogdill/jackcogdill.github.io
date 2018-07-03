@@ -7,4 +7,4 @@ Favicon created with [favicon.io](https://favicon.io/).
 
 ## Source
 
-Check out the [dev branch](/jackcogdill/jackcogdill.github.io/tree/dev).
+Check out the [dev branch](../../tree/dev).
