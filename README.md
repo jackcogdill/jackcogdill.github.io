@@ -14,6 +14,7 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 
 - [ ] Add projects
 - [ ] Add codepen
+- [ ] Add exploding balls effect on mouse click?
 - [ ] Slow scrolling background (use Rellax?)
     - [ ] Photo?
     - [ ] Black and white vs Tint pink
