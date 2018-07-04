@@ -9,7 +9,7 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 ## Todo
 
 - [x] Set up to use [Github Pages](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages)
-- [ ] Abstract header, footer, and content
+- [x] Abstract header and footer
 - [ ] Use Sass
 
 - [ ] Add projects
