@@ -5,12 +5,13 @@ const randInt = (min, max) => min + Math.floor(Math.random() * (max - min));
 const choice = str => str.charAt(randInt(0, str.length));
 
 function animate(innerFunction, baseCase, fps) {
+  let loop;
   if (fps && fps < 60) {
     const fpsInterval = 1000 / fps;
     let then = Date.now();
     let done = false;
 
-    function loop(callback) {
+    loop = (callback) => {
       if (done) {
         callback();
         return;
@@ -23,20 +24,23 @@ function animate(innerFunction, baseCase, fps) {
       if (elapsed <= fpsInterval) return;
       then = now - (elapsed % fpsInterval);
 
-      baseCase() ? done = true : innerFunction();
-    }
-    return new Promise(resolve => loop(resolve));
+      if (baseCase()) {
+        done = true;
+      } else {
+        innerFunction();
+      }
+    };
   } else {
-    function loop(callback) {
+    loop = (callback) => {
       if (baseCase()) {
         callback();
         return;
       }
       requestAnimationFrame(() => loop(callback));
       innerFunction();
-    }
-    return new Promise(resolve => loop(resolve));
+    };
   }
+  return new Promise(resolve => loop(resolve));
 }
 
 function sleep(ms) {
@@ -52,36 +56,32 @@ function setUp() {
   window.height = window.innerHeight;
   window.ctx = canvas.getContext('2d');
 
-  const width = window.width;
-  const height = window.height;
-  const ctx = window.ctx;
+  const { width, height, ctx } = window;
 
   window.isMobile = width <= 768;
 
   // Modify canvas to be high DPI
   // Lovingly adapted from http://stackoverflow.com/a/15666143/1313757
-  var dpr = window.devicePixelRatio || 1;
-  var bsr = ctx.webkitBackingStorePixelRatio
+  const dpr = window.devicePixelRatio || 1;
+  const bsr = ctx.webkitBackingStorePixelRatio
     || ctx.mozBackingStorePixelRatio
     || ctx.msBackingStorePixelRatio
     || ctx.oBackingStorePixelRatio
     || ctx.backingStorePixelRatio
     || 1;
-  var ratio = dpr / bsr;
+  const ratio = dpr / bsr;
 
   canvas.width = width * ratio;
   canvas.height = height * ratio;
-  canvas.style.width = width + 'px';
-  canvas.style.height = height + 'px';
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
   ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 }
 
 async function rain(message) {
   // Global vars
   // ================================
-  const width = window.width;
-  const height = window.height;
-  const ctx = window.ctx;
+  const { width, height, ctx } = window;
 
   // Misc constants
   // ================================
@@ -108,7 +108,7 @@ async function rain(message) {
   // ================================
   let numDrops = Math.floor(width / glyphW);
   // Both 'numDrops' and 'message.length' must be either even or odd to easily center
-  if ((numDrops + message.length) & 1) {
+  if ((numDrops + message.length) % 2) {
     numDrops--;
   }
 
@@ -140,7 +140,7 @@ async function rain(message) {
 
     if (perma) numPerma++;
 
-    drops.push({ y: y, perma: perma, done: false });
+    drops.push({ y, perma, done: false });
   }
   let numFinished = 0;
   let shouldStop = false;
@@ -170,7 +170,8 @@ async function rain(message) {
     drawBackground();
 
     drops = drops.map((drop, i) => {
-      let { y, perma, done } = drop;
+      let { y, done } = drop;
+      const { perma } = drop;
 
       // Letter in message reached its final position
       if (perma && Math.abs(y - textTop) < 0.0001) {
@@ -240,7 +241,9 @@ async function rain(message) {
     drawBackground('black');
     ctx.fillStyle = normal;
 
-    drops = drops.map(({ y, perma, done, char }, i) => {
+    drops = drops.map((drop, i) => {
+      let { done, char } = drop;
+      const { y, perma } = drop;
       if (perma && !done) {
         if (char === undefined) {
           char = message.charAt(i - textLeft);
@@ -258,7 +261,9 @@ async function rain(message) {
         }
       }
 
-      return { y, perma, done, char };
+      return {
+        y, perma, done, char,
+      };
     });
   }
 
