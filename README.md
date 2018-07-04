@@ -4,6 +4,7 @@ v2.0
 ## Credits
 
 Favicon created with [favicon.io](https://favicon.io/).
+Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/).
 
 ## Todo
 

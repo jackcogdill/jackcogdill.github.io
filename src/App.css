@@ -14,12 +14,12 @@ a:visited {
 }
 
 a:hover, a:active {
-  color: #4717F6;
+  color: yellow;
 }
 
 ::selection {
   background: rgba(0, 0, 0, 0.5);
-  color: #4717F6;
+  color: yellow;
 }
 
 .App {
@@ -27,7 +27,7 @@ a:hover, a:active {
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
   padding: 0 10%;
-  background: #101214;
+  background: #101214 url(images/binding_dark.png);
   font-family: 'Monsterrat', sans-serif;
   color: #EFEFEF;
 }
