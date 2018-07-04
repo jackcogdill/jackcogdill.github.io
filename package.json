@@ -20,8 +20,12 @@
     "pre-commit-msg": "echo 'Running pre-commit checks...' && exit 0",
     "eject": "react-scripts eject"
   },
-  "pre-commit": [ "pre-commit-msg", "lint" ],
+  "pre-commit": [
+    "pre-commit-msg",
+    "lint"
+  ],
   "devDependencies": {
+    "babel-eslint": "^8.2.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
