@@ -68,6 +68,7 @@ a:hover, a:active {
 .header-title {
   font-size: 4rem;
   font-weight: 500;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
