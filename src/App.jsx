@@ -47,6 +47,22 @@ Footer.propTypes = {
   isMobile: PropTypes.bool.isRequired,
 };
 
+const FancyHeader = ({ children, isMobile }) => {
+  const className = isMobile ? 'fancy-header-mobile' : 'fancy-header';
+  return (
+    <h2 className={className}>
+      <span>
+        {children}
+      </span>
+    </h2>
+  );
+};
+
+FancyHeader.propTypes = {
+  children: PropTypes.element.isRequired,
+  isMobile: PropTypes.bool.isRequired,
+};
+
 class App extends Component {
   constructor() {
     super();
@@ -78,9 +94,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content">
-          <p className="intro">
-            Welcome to my website. I hope you enjoy your stay.
-          </p>
+          <FancyHeader isMobile={isMobile}>
+            {"Here's what I've done"}
+          </FancyHeader>
         </div>
         <Footer isMobile={isMobile} />
       </div>
