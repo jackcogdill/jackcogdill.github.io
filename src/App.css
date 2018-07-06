@@ -65,15 +65,34 @@ a:hover, a:active {
   border: none;
 }
 
+.header-image-wrapper {
+  display: grid;
+}
+
+.header-image {
+  justify-self: center;
+  border: 2px solid #007fff;
+  border-radius: 50%;
+  width: 25vw;
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    width: 60vw;
+  }
+}
+
 .header-title {
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: 2px;
+  margin: 1rem 0 3rem;
 }
 
 @media (max-width: 768px) {
   .header-title {
     font-size: 3rem;
+    margin: 2rem 0 3rem;
   }
 }
 
@@ -82,6 +101,7 @@ a:hover, a:active {
   font-weight: 100;
   letter-spacing: 1px;
   line-height: 1.5em;
+  margin: 2rem 0;
 }
 
 .timeline {

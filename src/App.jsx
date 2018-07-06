@@ -5,15 +5,23 @@ import FancyHeader from './FancyHeader';
 import TimelineElem from './Timeline';
 import './App.css';
 
+import Profile from './images/closeup.jpg';
 import Faithlife from './images/faithlife.png';
 import HackAttack from './images/hackattack.jpg';
 
 const Header = () => (
   <header className="header">
-    <h1 className="header-title">
+    <div className="header-image-wrapper">
+      <img
+        className="header-image"
+        src={Profile}
+        alt="Profile"
+      />
+    </div>
+    <div className="header-title">
       {"Hi! I'm Jack."}
-    </h1>
-    <h2 className="header-description">
+    </div>
+    <div className="header-description">
       {"I'm a student at"}
       {' '}
       <a href="https://vt.edu/">
@@ -21,7 +29,7 @@ const Header = () => (
       </a>
       {' '}
       studying Computer Science and Japanese.
-    </h2>
+    </div>
   </header>
 );
 
