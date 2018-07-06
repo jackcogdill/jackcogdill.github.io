@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import FancyHeader from './FancyHeader';
+import TimelineElem from './Timeline';
 import './App.css';
+
+import Faithlife from './images/faithlife.png';
 
 const Header = () => (
   <header className="header">
@@ -83,6 +86,19 @@ class App extends Component {
           <FancyHeader isMobile={isMobile}>
             {"Here's what I've done"}
           </FancyHeader>
+          <TimelineElem
+            image={Faithlife}
+            title="Faithlife"
+            date="Summer 2017"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam.
+            Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi eget mauris.
+            Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa sed elementum.
+            Quis enim lobortis scelerisque fermentum dui. Ultrices dui sapien eget mi proin sed.
+            Viverra suspendisse potenti nullam ac tortor vitae purus. Eget dolor morbi non arcu
+            risus quis. A lacus vestibulum sed arcu.
+          </TimelineElem>
         </div>
         <Footer isMobile={isMobile} />
       </div>
