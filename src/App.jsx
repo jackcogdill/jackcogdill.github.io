@@ -6,6 +6,7 @@ import TimelineElem from './Timeline';
 import './App.css';
 
 import Faithlife from './images/faithlife.png';
+import HackAttack from './images/hackattack.jpg';
 
 const Header = () => (
   <header className="header">
@@ -86,26 +87,48 @@ class App extends Component {
           <FancyHeader isMobile={isMobile}>
             {"Here's what I've done"}
           </FancyHeader>
-          <TimelineElem
-            image={Faithlife}
-            title="Faithlife"
-            date="Summer 2017"
-          >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam.
-              Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi eget mauris.
-              Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa sed elementum.
-              Quis enim lobortis scelerisque fermentum dui. Ultrices dui sapien eget mi proin sed.
-              Viverra suspendisse potenti nullam ac tortor vitae purus. Eget dolor morbi non arcu
-              risus quis. A lacus vestibulum sed arcu.
-            </p>
-            <div>
-              <a href="https://faithlife.com/about">
-                Website
-              </a>
-            </div>
-          </TimelineElem>
+          <div className="timeline">
+            <TimelineElem
+              image={Faithlife}
+              title="Faithlife"
+              date="Summer 2017"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus
+                aliquam. Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi
+                eget mauris. Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa
+                sed elementum. Quis enim lobortis scelerisque fermentum dui. Ultrices dui
+                sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
+                purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
+              </p>
+              <div>
+                <a href="https://faithlife.com/about">
+                  Website
+                </a>
+              </div>
+            </TimelineElem>
+            <TimelineElem
+              image={HackAttack}
+              title="Hack Attack"
+              date="April 2017"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus
+                aliquam. Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi
+                eget mauris. Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa
+                sed elementum. Quis enim lobortis scelerisque fermentum dui. Ultrices dui
+                sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
+                purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
+              </p>
+              <div>
+                <a href="https://github.com/jackcogdill/FB-hack-attack">
+                  Code
+                </a>
+              </div>
+            </TimelineElem>
+          </div>
         </div>
         <Footer isMobile={isMobile} />
       </div>
