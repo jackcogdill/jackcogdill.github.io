@@ -91,13 +91,20 @@ class App extends Component {
             title="Faithlife"
             date="Summer 2017"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam.
-            Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi eget mauris.
-            Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa sed elementum.
-            Quis enim lobortis scelerisque fermentum dui. Ultrices dui sapien eget mi proin sed.
-            Viverra suspendisse potenti nullam ac tortor vitae purus. Eget dolor morbi non arcu
-            risus quis. A lacus vestibulum sed arcu.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam.
+              Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi eget mauris.
+              Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa sed elementum.
+              Quis enim lobortis scelerisque fermentum dui. Ultrices dui sapien eget mi proin sed.
+              Viverra suspendisse potenti nullam ac tortor vitae purus. Eget dolor morbi non arcu
+              risus quis. A lacus vestibulum sed arcu.
+            </p>
+            <div>
+              <a href="https://faithlife.com/about">
+                Website
+              </a>
+            </div>
           </TimelineElem>
         </div>
         <Footer isMobile={isMobile} />
