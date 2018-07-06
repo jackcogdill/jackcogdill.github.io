@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+import FancyHeader from './FancyHeader';
 import './App.css';
 
 const Header = () => (
@@ -44,22 +46,6 @@ const Footer = ({ isMobile }) => (
 );
 
 Footer.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
-};
-
-const FancyHeader = ({ children, isMobile }) => {
-  const className = isMobile ? 'fancy-header-mobile' : 'fancy-header';
-  return (
-    <h2 className={className}>
-      <span>
-        {children}
-      </span>
-    </h2>
-  );
-};
-
-FancyHeader.propTypes = {
-  children: PropTypes.element.isRequired,
   isMobile: PropTypes.bool.isRequired,
 };
 
