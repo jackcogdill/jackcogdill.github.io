@@ -1,9 +1,14 @@
 .fancy-header {
   font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.fancy-header-mobile {
+  padding-bottom: 3rem;
 }
 
 .fancy-header, .fancy-header-mobile {
-  color: #ffff00;
+  color: #00ff80;
   text-align: center;
   font-weight: 500;
   letter-spacing: 1px;
