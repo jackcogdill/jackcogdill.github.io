@@ -42,18 +42,18 @@
 
 .timeline-date {
   grid-area: timeline-date;
-  position: relative;
   font-weight: 100;
   font-size: 2rem;
+  width: 2rem;
   color: #007fff;
 }
 
 .timeline-date span {
   display: block;
-  position: absolute;
   width: 20vw;
   transform: rotate(90deg);
   transform-origin: bottom left;
+  white-space: nowrap;
 }
 
 .timeline-elem {
@@ -79,10 +79,10 @@
 
   .timeline-date {
     font-size: 1.5rem;
+    width: 100%;
   }
 
   .timeline-date span {
-    position: relative;
     transform: none;
     width: 100%;
     text-align: center;
