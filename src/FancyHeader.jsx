@@ -14,7 +14,7 @@ const FancyHeader = ({ children, isMobile }) => {
 };
 
 FancyHeader.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.string.isRequired,
   isMobile: PropTypes.bool.isRequired,
 };
 
