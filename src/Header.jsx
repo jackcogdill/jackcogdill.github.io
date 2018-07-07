@@ -11,6 +11,12 @@ function scrollDown() {
   });
 }
 
+function handleKeyDown(event) {
+  if ([event.keyCode, event.which].includes(13)) {
+    scrollDown();
+  }
+}
+
 function getScrollTop() {
   const doc = document.documentElement || document.body.parentNode || document.body;
   const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : doc.scrollTop;
@@ -56,7 +62,7 @@ class Header extends Component {
           id="header-arrow"
           className="header-arrow"
           onClick={scrollDown}
-          onKeyDown={scrollDown}
+          onKeyDown={handleKeyDown}
           role="button"
           tabIndex={0}
         >
