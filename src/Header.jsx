@@ -25,7 +25,9 @@ function getScrollTop() {
 
 function handleScroll() {
   const arrow = document.getElementById('header-arrow');
-  arrow.style.opacity = (getScrollTop() === 0) ? 1 : 0;
+  if (arrow) {
+    arrow.style.opacity = (getScrollTop() === 0) ? 1 : 0;
+  }
 }
 
 class Header extends Component {
@@ -37,9 +39,16 @@ class Header extends Component {
     window.removeEventListener('scroll', handleScroll);
   }
 
+  shouldDisplayArrow() {
+    return !this.headerRef || this.headerRef.clientHeight === window.innerHeight;
+  }
+
   render() {
     return (
-      <div className="header">
+      <div
+        className="header"
+        ref={(elem) => { this.headerRef = elem; }}
+      >
         <div className="header-image-wrapper">
           <div
             className="header-image"
@@ -58,18 +67,20 @@ class Header extends Component {
           {' '}
           studying Computer Science and Japanese.
         </div>
-        <div
-          id="header-arrow"
-          className="header-arrow"
-          onClick={scrollDown}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex={0}
-        >
-          <FontAwesomeIcon
-            icon={faAngleDown}
-          />
-        </div>
+        {this.shouldDisplayArrow() && (
+          <div
+            id="header-arrow"
+            className="header-arrow"
+            onClick={scrollDown}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={0}
+          >
+            <FontAwesomeIcon
+              icon={faAngleDown}
+            />
+          </div>
+        )}
       </div>
     );
   }
