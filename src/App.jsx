@@ -76,11 +76,9 @@ const Timeline = () => (
         sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
         purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
       </p>
-      <div>
-        <a href="https://faithlife.com/about">
-          Website
-        </a>
-      </div>
+      <a href="https://faithlife.com/about">
+        Website
+      </a>
     </TimelineElem>
     <TimelineElem
       image={HackAttack}
@@ -96,11 +94,9 @@ const Timeline = () => (
         sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
         purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
       </p>
-      <div>
-        <a href="https://github.com/jackcogdill/FB-hack-attack">
-          Code
-        </a>
-      </div>
+      <a href="https://github.com/jackcogdill/FB-hack-attack">
+        Code
+      </a>
     </TimelineElem>
   </div>
 );

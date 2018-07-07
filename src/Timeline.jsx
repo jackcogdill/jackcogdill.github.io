@@ -19,7 +19,7 @@ const TimelineElem = ({
     </div>
     {children.length && (
       <div className="timeline-links">
-        {children[1]}
+        {children.slice(1)}
       </div>
     )}
     <div className="timeline-date">
@@ -34,7 +34,7 @@ TimelineElem.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 export default TimelineElem;
