@@ -11,20 +11,24 @@ function scrollDown() {
   });
 }
 
+function getScrollTop() {
+  const doc = document.documentElement || document.body.parentNode || document.body;
+  const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : doc.scrollTop;
+  return scrollTop;
+}
+
+function handleScroll() {
+  const arrow = document.getElementById('header-arrow');
+  arrow.style.opacity = (getScrollTop() === 0) ? 1 : 0;
+}
+
 class Header extends Component {
   componentWillMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll() {
-    const arrow = document.getElementById('header-arrow');
-    arrow.style.transition = 'opacity 0.25s ease-in-out';
-    arrow.style.opacity = 0;
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', handleScroll);
   }
 
   render() {

@@ -117,6 +117,7 @@ a:hover, a:active {
   left: 50%;
   cursor: pointer;
   outline: none;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .timeline {
