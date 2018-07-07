@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 
 a {
   text-decoration: none;
@@ -28,7 +28,7 @@ a:hover, a:active {
   min-height: 100%;
   padding: 0 10%;
   background: #101214 url(images/binding_dark.png);
-  font-family: 'Monsterrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #EFEFEF;
 }
 
@@ -45,7 +45,6 @@ a:hover, a:active {
 .footer {
   padding: 4rem 0;
   font-size: 1.1rem;
-  font-weight: 100;
   display: grid;
   grid-template-columns: 1fr auto;
 }
@@ -90,7 +89,7 @@ a:hover, a:active {
 
 .header-title {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: 2px;
   margin: 1rem 0 3rem;
 }
@@ -104,7 +103,7 @@ a:hover, a:active {
 
 .header-description {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: lighter;
   letter-spacing: 1px;
   line-height: 1.5em;
   margin: 2rem 0;

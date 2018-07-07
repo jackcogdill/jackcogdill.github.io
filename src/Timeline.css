@@ -1,7 +1,6 @@
 .timeline-title {
   grid-area: timeline-title;
   color: #ff007f;
-  font-weight: 300;
   font-size: 2rem;
 }
 
@@ -22,7 +21,7 @@
 .timeline-content {
   grid-area: timeline-content;
   font-size: 1.1rem;
-  font-weight: 100;
+  font-weight: lighter;
   line-height: 1.5;
 }
 
@@ -30,7 +29,6 @@
   grid-area: timeline-links;
   font-size: 1.1rem;
   color: #ff007f;
-  font-weight: 100;
 }
 
 .timeline-links a {
@@ -42,8 +40,7 @@
 
 .timeline-date {
   grid-area: timeline-date;
-  font-weight: 100;
-  font-size: 2rem;
+  font-size: 2.5rem;
   width: 2rem;
   color: #007fff;
 }
