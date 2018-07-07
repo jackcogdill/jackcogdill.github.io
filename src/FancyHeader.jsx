@@ -6,9 +6,9 @@ const FancyHeader = ({ children, isMobile }) => {
   const className = isMobile ? 'fancy-header-mobile' : 'fancy-header';
   return (
     <div className={className}>
-      <span>
+      <div>
         {children}
-      </span>
+      </div>
     </div>
   );
 };
