@@ -1,10 +1,10 @@
 .fancy-header {
   font-size: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .fancy-header-mobile {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .fancy-header, .fancy-header-mobile {

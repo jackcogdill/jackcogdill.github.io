@@ -1,37 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Header from './Header';
 import FancyHeader from './FancyHeader';
 import TimelineElem from './Timeline';
 import './App.css';
 
-import Profile from './images/closeup.jpg';
 import Faithlife from './images/faithlife.png';
 import HackAttack from './images/hackattack.jpg';
-
-const Header = () => (
-  <header className="header">
-    <div className="header-image-wrapper">
-      <img
-        className="header-image"
-        src={Profile}
-        alt="Profile"
-      />
-    </div>
-    <div className="header-title">
-      {"Hi! I'm Jack."}
-    </div>
-    <div className="header-description">
-      {"I'm a student at"}
-      {' '}
-      <a href="https://vt.edu/">
-        Virginia Tech
-      </a>
-      {' '}
-      studying Computer Science and Japanese.
-    </div>
-  </header>
-);
 
 const Footer = ({ isMobile }) => (
   <footer className="footer">

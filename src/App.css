@@ -37,7 +37,9 @@ a:hover, a:active {
 }
 
 .header {
-  padding-top: 4rem;
+  padding: 4rem 0;
+  min-height: calc(100vh - 8rem);
+  position: relative;
 }
 
 .footer {
@@ -70,15 +72,19 @@ a:hover, a:active {
 }
 
 .header-image {
-  justify-self: center;
   border: 2px solid #007fff;
   border-radius: 50%;
   width: 25vw;
+  height: 25vw;
+  background: no-repeat center center;
+  background-size: cover;
+  justify-self: center;
 }
 
 @media (max-width: 768px) {
   .header-image {
     width: 60vw;
+    height: 60vw;
   }
 }
 
@@ -102,6 +108,15 @@ a:hover, a:active {
   letter-spacing: 1px;
   line-height: 1.5em;
   margin: 2rem 0;
+}
+
+.header-arrow {
+  font-size: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  cursor: pointer;
+  outline: none;
 }
 
 .timeline {

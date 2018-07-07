@@ -5,11 +5,11 @@ import './FancyHeader.css';
 const FancyHeader = ({ children, isMobile }) => {
   const className = isMobile ? 'fancy-header-mobile' : 'fancy-header';
   return (
-    <h2 className={className}>
+    <div className={className}>
       <span>
         {children}
       </span>
-    </h2>
+    </div>
   );
 };
 
