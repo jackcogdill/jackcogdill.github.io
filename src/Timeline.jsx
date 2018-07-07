@@ -14,24 +14,14 @@ const TimelineElem = ({
     <div className="timeline-title">
       {title}
     </div>
-    {
-      (children.length > 1)
-        ? (
-          <div>
-            <div className="timeline-content">
-              {children[0]}
-            </div>
-            <div className="timeline-links">
-              {children[1]}
-            </div>
-          </div>
-        )
-        : (
-          <div className="timeline-content">
-            {children}
-          </div>
-        )
-    }
+    <div className="timeline-content">
+      {children.length ? children[0] : children}
+    </div>
+    {children.length && (
+      <div className="timeline-links">
+        {children[1]}
+      </div>
+    )}
     <div className="timeline-date">
       <span>
         {date}
