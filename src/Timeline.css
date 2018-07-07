@@ -23,6 +23,7 @@
   font-size: 1.1rem;
   font-weight: lighter;
   line-height: 1.5;
+  max-width: 70ch;
 }
 
 .timeline-links {
