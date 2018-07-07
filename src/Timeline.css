@@ -36,6 +36,12 @@
   border: 1px solid;
   border-radius: 2px;
   padding: 0.5em 1.5em;
+  margin-left: 1em;
+  text-align: center;
+}
+
+.timeline-links a:first-child {
+  margin: 0;
 }
 
 .timeline-date {
