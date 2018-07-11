@@ -34,11 +34,9 @@ const Header = () => (
 
 const Footer = ({ isMobile }) => (
   <footer className="footer">
-    {!isMobile && (
-      <span>
-        Jack Cogdill
-      </span>
-    )}
+    <FancyHeader isMobile={isMobile}>
+      {"Let's Get in Touch!"}
+    </FancyHeader>
     <div className="footer-links">
       <a href="mailto:jackcog@vt.edu">
         Email
@@ -52,6 +50,12 @@ const Footer = ({ isMobile }) => (
       <a href="https://www.instagram.com/jackcogdill/">
         Instagram
       </a>
+    </div>
+    <div className="footer-credits">
+      <a href="https://github.com/jackcogdill/jackcogdill.github.io/tree/dev">
+        Hand-made with love
+      </a>
+      {' by Jack Cogdill'}
     </div>
   </footer>
 );

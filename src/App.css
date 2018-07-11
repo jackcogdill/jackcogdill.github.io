@@ -48,18 +48,30 @@ a:hover, a:active {
 .footer {
   padding: 4rem 0;
   font-size: 1.1rem;
+  text-align: center;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-gap: 1rem;
 }
 
 .footer-links {
+  justify-self: center;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 2.5rem;
-  text-align: center;
 }
 
-@media (max-width: 600px) {
+.footer-credits {
+  display: inline-block;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+
   .footer-links {
     grid-template-columns: repeat(2, auto);
   }
