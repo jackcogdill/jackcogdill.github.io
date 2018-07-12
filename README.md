@@ -13,7 +13,7 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 - [x] Abstract FancyHeader to its own file
 - [ ] Use Sass
 
-- [ ] Add intro and (photo?) before content?
+- [x] Add intro and (photo?) before content?
 - [ ] Add projects
 - [ ] Add codepen
 - [ ] Add exploding balls effect on mouse click?
