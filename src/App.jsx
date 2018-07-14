@@ -53,7 +53,7 @@ const Footer = ({ isMobile }) => (
     </div>
     <div className="footer-credits">
       <a href="https://github.com/jackcogdill/jackcogdill.github.io/tree/dev">
-        Hand-made with love
+        Hand-coded with love
       </a>
       {' by Jack Cogdill'}
     </div>
