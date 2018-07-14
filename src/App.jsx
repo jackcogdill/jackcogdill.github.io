@@ -72,13 +72,12 @@ const Timeline = () => (
       date="Summer 2017"
     >
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus
-        aliquam. Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi
-        eget mauris. Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa
-        sed elementum. Quis enim lobortis scelerisque fermentum dui. Ultrices dui
-        sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
-        purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
+        The people at Faithlife taught me the value of constant learning.
+        This internship I got coffee with employees from nearly every department
+        (including the CEO), learned new languages and frameworks, used systems concepts I had yet
+        to learn in school, read books on business, and learned how to steam milk for the
+        perfect latte. Along with some of the friendliest coworkers and interns, I will never
+        forget my time at Faithlife.
       </p>
       <a href="https://faithlife.com/about">
         Website
