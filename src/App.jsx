@@ -69,6 +69,7 @@ const Timeline = () => (
     <TimelineElem
       image={Faithlife}
       title="Faithlife"
+      location="Bellingham, Washington"
       date="Summer 2017"
     >
       <p>
@@ -86,6 +87,7 @@ const Timeline = () => (
     <TimelineElem
       image={HackAttack}
       title="Hack Attack"
+      location="University of Maryland & Virginia Tech"
       date="April 2017"
     >
       <p>

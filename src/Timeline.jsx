@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Timeline.css';
 
 const TimelineElem = ({
-  image, title, date, children,
+  image, title, location, date, children,
 }) => (
   <div className="timeline-elem">
     <div
@@ -13,6 +13,9 @@ const TimelineElem = ({
     />
     <div className="timeline-title">
       {title}
+    </div>
+    <div className="timeline-location">
+      {location}
     </div>
     <div className="timeline-content">
       {children.length ? children[0] : children}
@@ -33,6 +36,7 @@ const TimelineElem = ({
 TimelineElem.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

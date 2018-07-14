@@ -4,6 +4,13 @@
   font-size: 2rem;
 }
 
+.timeline-location {
+  grid-area: timeline-location;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: -1rem;
+}
+
 .timeline-image {
   grid-area: timeline-image;
   border: 2px solid #ff007f;
@@ -68,13 +75,18 @@
   grid-row-gap: 1.5rem;
   grid-column-gap: 4rem;
   grid-template-areas:
-    "timeline-image timeline-title   timeline-date"
-    "timeline-image timeline-content timeline-date"
-    "timeline-image timeline-links   timeline-date";
+    "timeline-image timeline-title    timeline-date"
+    "timeline-image timeline-location timeline-date"
+    "timeline-image timeline-content  timeline-date"
+    "timeline-image timeline-links    timeline-date";
 }
 
 @media (max-width: 768px) {
   .timeline-title {
+    text-align: center;
+  }
+
+  .timeline-location {
     text-align: center;
   }
 
@@ -101,6 +113,7 @@
     grid-template-areas:
       "timeline-image"
       "timeline-title"
+      "timeline-location"
       "timeline-date"
       "timeline-content"
       "timeline-links";
