@@ -131,6 +131,10 @@
     text-align: center;
   }
 
+  .timeline-links {
+    margin: 0 auto;
+  }
+
   .timeline-elem {
     grid-template-areas:
       "timeline-image"
