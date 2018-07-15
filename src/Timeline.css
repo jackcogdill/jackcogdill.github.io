@@ -34,6 +34,11 @@
   max-width: 70ch;
 }
 
+.timeline-content > div {
+  display: grid;
+  grid-gap: 1rem;
+}
+
 .timeline-links {
   grid-area: timeline-links;
   font-size: 1.1rem;

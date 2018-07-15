@@ -90,15 +90,26 @@ const Timeline = () => (
       location="University of Maryland & Virginia Tech"
       date="April 2017"
     >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus
-        aliquam. Ornare massa eget egestas purus viverra. Diam maecenas ultricies mi
-        eget mauris. Lacus luctus accumsan tortor posuere ac. Leo in vitae turpis massa
-        sed elementum. Quis enim lobortis scelerisque fermentum dui. Ultrices dui
-        sapien eget mi proin sed. Viverra suspendisse potenti nullam ac tortor vitae
-        purus. Eget dolor morbi non arcu risus quis. A lacus vestibulum sed arcu.
-      </p>
+      <div>
+        <p>
+          <a href="https://bit.camp/">
+            Bitcamp
+          </a>
+          {' '}
+          was my first ever hackathon experience.
+          Our small team of three created an interactive website with 1-on-1
+          programming challenges designed to teach Python.
+        </p>
+        <p>
+          A few weeks later, our club, Hackers at VT, decided to use the site for an event
+          we were hosting with Facebook. In preparation, we made numerous cryptography and
+          capture the flag challenges, as well as redesigned the site. At the event, we had a
+          tournament-style bracket with over 95 students who participated.
+        </p>
+        <p>
+          {"This is the most fun project I've worked on just because so many people were able to enjoy it."}
+        </p>
+      </div>
       <a href="https://github.com/jackcogdill/FB-hack-attack">
         Code
       </a>
