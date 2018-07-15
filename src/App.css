@@ -66,7 +66,7 @@ a:hover, a:active {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .footer {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
@@ -96,6 +96,13 @@ a:hover, a:active {
 }
 
 @media (max-width: 768px) {
+  .header-image {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
   .header-image {
     width: 60vw;
     height: 60vw;

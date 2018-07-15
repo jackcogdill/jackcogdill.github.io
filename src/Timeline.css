@@ -82,6 +82,23 @@
 }
 
 @media (max-width: 768px) {
+  .timeline-image {
+    width: 40vw;
+    height: 40vw;
+    margin: 0 auto 1rem;
+  }
+
+  .timeline-elem {
+    grid-template-areas:
+      "timeline-image timeline-image timeline-image"
+      "timeline-title timeline-title timeline-date"
+      "timeline-location timeline-location timeline-date"
+      "timeline-content timeline-content timeline-date"
+      "timeline-links timeline-links timeline-links";
+  }
+}
+
+@media (max-width: 600px) {
   .timeline-title {
     text-align: center;
   }
