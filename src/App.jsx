@@ -96,8 +96,8 @@ const Timeline = () => (
             Bitcamp
           </a>
           {' '}
-          was my first ever hackathon experience.
-          Our small team of three created an interactive website with 1-on-1
+          was my first ever hackathon.
+          Our team created a website with 1-on-1
           programming challenges designed to teach Python.
         </p>
         <p>
@@ -107,7 +107,7 @@ const Timeline = () => (
           tournament-style bracket with over 95 students who participated.
         </p>
         <p>
-          {"This is the most fun project I've worked on just because so many people were able to enjoy it."}
+          {"This is the most fun project I've worked on to date, just because so many people were able to enjoy it."}
         </p>
       </div>
       <a href="https://github.com/jackcogdill/FB-hack-attack">
