@@ -16,6 +16,8 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 - [x] Add intro and (photo?) before content?
 - [ ] Add projects
 - [ ] Add codepen
+
+- [ ] Add hamburger menu for quick navigation
 - [ ] Add exploding balls effect on mouse click?
 - [ ] Slow scrolling background (use Rellax?)
     - [ ] Photo?
