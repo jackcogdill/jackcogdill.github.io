@@ -5,7 +5,21 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Shirousagi from './shirousagi';
 
+const imageReferences = {};
+
+const preloadImages = () => {
+  const importAll = r => r.keys().map(r);
+  const images = importAll(require.context('./images', false, /^\.\//));
+
+  images.forEach((file) => {
+    const image = new Image();
+    image.src = file;
+    imageReferences[file] = image;
+  });
+};
+
 (async () => {
+  preloadImages();
   await Shirousagi.intro();
 
   // Start React
