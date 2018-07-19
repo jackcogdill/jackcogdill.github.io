@@ -285,7 +285,7 @@ async function rain(message) {
 
 async function intro() {
   setUp();
-  const message = window.isMobile ? 'HELLO THERE' : 'OH, WHY HELLO THERE';
+  const message = 'WELCOME, FRIEND';
   await rain(message);
 }
 
