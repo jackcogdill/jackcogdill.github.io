@@ -90,7 +90,12 @@ const Timeline = () => (
     >
       <div>
         <p>
-          At my first-ever hackathon, Bitcamp, our team created Hack Attack: a website with 1-on-1
+          At my first-ever hackathon,
+          {' '}
+          <a href="https://bit.camp/">
+            Bitcamp
+          </a>
+          , our team created Hack Attack: a website with 1-on-1
           programming challenges designed to teach Python.
         </p>
         <p>
@@ -105,9 +110,6 @@ const Timeline = () => (
       </div>
       <a href="https://github.com/jackcogdill/FB-hack-attack">
         Code
-      </a>
-      <a href="https://bit.camp/">
-        Bitcamp
       </a>
     </TimelineElem>
   </div>
