@@ -73,11 +73,10 @@ const Timeline = () => (
     >
       <p>
         The people at Faithlife taught me the value of constant learning.
-        This internship I got coffee with employees from nearly every department
-        (including the CEO), learned new languages and frameworks, used systems concepts I had yet
-        to learn in school, read books on business, and learned how to steam milk for the
-        perfect latte. Along with some of the friendliest coworkers and interns, I will never
-        forget my time at Faithlife.
+        During this internship I got coffee with employees from nearly every department
+        (including the CEO), learned JavaScript Promises, read books on business, and learned
+        how to steam milk for the perfect latte. Along with some of the friendliest coworkers
+        and interns, I will never forget my time at Faithlife.
       </p>
       <a href="https://faithlife.com/about">
         Website
@@ -91,12 +90,7 @@ const Timeline = () => (
     >
       <div>
         <p>
-          <a href="https://bit.camp/">
-            Bitcamp
-          </a>
-          {' '}
-          was my first ever hackathon.
-          Our team created a website with 1-on-1
+          At my first-ever hackathon, Bitcamp, our team created Hack Attack—a website with 1-on-1
           programming challenges designed to teach Python.
         </p>
         <p>
@@ -111,6 +105,9 @@ const Timeline = () => (
       </div>
       <a href="https://github.com/jackcogdill/FB-hack-attack">
         Code
+      </a>
+      <a href="https://bit.camp/">
+        Bitcamp
       </a>
     </TimelineElem>
   </div>
