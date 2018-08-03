@@ -35,7 +35,7 @@ const Header = () => (
 const Footer = ({ isMobile }) => (
   <footer className="footer">
     <FancyHeader isMobile={isMobile}>
-      {"Let's Get in Touch!"}
+      {"Let's get in touch!"}
     </FancyHeader>
     <div className="footer-links">
       <a href="mailto:jackcog@vt.edu">
