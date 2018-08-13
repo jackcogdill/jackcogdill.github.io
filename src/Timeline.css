@@ -66,6 +66,7 @@
   padding-left: 2rem;
   padding-top: 2rem;
   margin-right: -4rem;
+  text-transform: uppercase;
 }
 
 .timeline-date span {
