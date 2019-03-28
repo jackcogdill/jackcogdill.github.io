@@ -1,1 +1,9 @@
+.allergies {
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+  display: grid;
+}
 
+.markdown {
+  margin: auto;
+}
