@@ -47,7 +47,7 @@ const Footer = ({ isMobile }) => (
       <a href="https://github.com/jackcogdill">
         Github
       </a>
-      <a href="/_files/cv.pdf">
+      <a href="/__files/cv.pdf">
         Resume
       </a>
       <a href="https://www.instagram.com/jackcogdill/">
