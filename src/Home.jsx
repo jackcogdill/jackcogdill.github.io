@@ -20,7 +20,7 @@ const Header = () => (
     </div>
     <div className="header-description">
       <p>
-        {"I'm"}
+        {"I'm "}
         a recent graduate of Virginia Tech where I studied Computer Science and Japanese.
         Currently I am a software engineer at Google.
       </p>
