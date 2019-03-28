@@ -19,12 +19,8 @@ const Header = () => (
     </div>
     <div className="header-description">
       <p>
-        {"I'm a recent graduate of "}
-        <a href="https://vt.edu/">
-          Virginia Tech
-        </a>
-        {' '}
-        where I studied Computer Science and Japanese.
+        {"I'm"}
+        a recent graduate of Virginia Tech where I studied Computer Science and Japanese.
         Currently I am a software engineer at Google.
       </p>
       <br />
@@ -56,11 +52,6 @@ const Footer = ({ isMobile }) => (
       </a>
       <a href="https://www.instagram.com/jackcogdill/">
         Instagram
-      </a>
-    </div>
-    <div className="footer-credits">
-      <a href="https://github.com/jackcogdill/jackcogdill.github.io/tree/dev">
-        Hand-coded with &lt;3
       </a>
     </div>
   </footer>
