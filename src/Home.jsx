@@ -18,20 +18,23 @@ const Header = () => (
       {"Hi! I'm Jack."}
     </div>
     <div className="header-description">
-      {"I'm a student at"}
-      {' '}
-      <a href="https://vt.edu/">
-        Virginia Tech
-      </a>
-      {' '}
-      studying Computer Science and Japanese.
+      <p>
+        {"I'm a recent graduate of "}
+        <a href="https://vt.edu/">
+          Virginia Tech
+        </a>
+        {' '}
+        where I studied Computer Science and Japanese.
+        Currently I am a software engineer at Google.
+      </p>
       <br />
-      <br />
-      I also have a lot of
-      <Link to="/allergies">
-        food allergies
-      </Link>
-      .
+      <p>
+        {'I have a lot of '}
+        <Link to="/allergies">
+          food allergies
+        </Link>
+        .
+      </p>
     </div>
   </div>
 );
