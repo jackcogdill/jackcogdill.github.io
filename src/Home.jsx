@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import FancyHeader from './FancyHeader';
 import Profile from './images/closeup.jpg';
+import Resume from './files/cv.pdf';
 
 const Header = () => (
   <div className="header">
@@ -47,7 +48,7 @@ const Footer = ({ isMobile }) => (
       <a href="https://github.com/jackcogdill">
         Github
       </a>
-      <a href="/__files/cv.pdf">
+      <a href={Resume}>
         Resume
       </a>
       <a href="https://www.instagram.com/jackcogdill/">

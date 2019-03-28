@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import './Allergies.css';
-import Markdown from './other/allergies.md';
+import Markdown from './files/allergies.md';
 
 class Allergies extends Component {
   constructor() {

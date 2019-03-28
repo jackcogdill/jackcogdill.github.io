@@ -1,10 +1,10 @@
 #! /bin/bash
 pushd $(dirname "$0")
 
-OUT="public/files"
+OUT="src/files"
 
 # Update allergies
-curl https://raw.githubusercontent.com/jackcogdill/Food-Allergies/master/README.md > src/other/allergies.md
+curl https://raw.githubusercontent.com/jackcogdill/Food-Allergies/master/README.md > $OUT/allergies.md
 
 # Update resume pdf
 curl https://raw.githubusercontent.com/jackcogdill/Resume/master/cv.tex > cv.tex
