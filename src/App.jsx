@@ -37,7 +37,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/" render={() => <Home isMobile={isMobile} />} />
-            <Route path="/allergies" component={Allergies} />
+            <Route exact path="/allergies" component={Allergies} />
           </Switch>
         </div>
       </Router>
