@@ -42,7 +42,7 @@ const Footer = ({ isMobile }) => (
       {"Let's get in touch!"}
     </FancyHeader>
     <div className="footer-links">
-      <a href="mailto:jackcog@vt.edu">
+      <a href="mailto:hi@jackcogdill.com">
         Email
       </a>
       <a href="https://github.com/jackcogdill">
