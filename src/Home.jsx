@@ -1,24 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './Home.css';
 import FancyHeader from './FancyHeader';
-import Profile from './images/closeup.jpg';
+import Headshot from './images/closeup.jpg';
 import Resume from './files/cv.pdf';
 
-const Header = () => (
-  <div className="header">
-    <div className="header-image-wrapper">
+const Profile = () => (
+  <div className="profile">
+    <div className="profile-image-wrapper">
       <div
-        className="header-image"
-        style={{ backgroundImage: `url(${Profile})` }}
+        className="profile-image"
+        style={{ backgroundImage: `url(${Headshot})` }}
       />
     </div>
-    <div className="header-title">
+    <div className="profile-title">
       {"Hi! I'm Jack."}
     </div>
-    <div className="header-description">
+  </div>
+);
+
+const Location = () => (
+  <div className="location">
+    <div className="location-marker">
+      <FontAwesomeIcon icon="map-marker-alt" color="#ff007f" />
+    </div>
+    <div className="locations">
+      <div>
+        Charlotte
+      </div>
+      <div>
+        Blacksburg
+      </div>
+      <div>
+        Mountain View
+      </div>
+    </div>
+  </div>
+);
+
+const Info = () => (
+  <div className="info">
+    <div className="info-description">
       <p>
         {"I'm "}
         a recent graduate of Virginia Tech where I studied Computer Science and Japanese.
@@ -36,12 +61,12 @@ const Header = () => (
   </div>
 );
 
-const Footer = ({ isMobile }) => (
-  <footer className="footer">
+const Contact = ({ isMobile }) => (
+  <div className="contact">
     <FancyHeader isMobile={isMobile}>
       {"Let's get in touch!"}
     </FancyHeader>
-    <div className="footer-links">
+    <div className="contact-links">
       <a href="mailto:hi@jackcogdill.com">
         Email
       </a>
@@ -55,17 +80,19 @@ const Footer = ({ isMobile }) => (
         Instagram
       </a>
     </div>
-  </footer>
+  </div>
 );
 
-Footer.propTypes = {
+Contact.propTypes = {
   isMobile: PropTypes.bool.isRequired,
 };
 
 const Home = ({ isMobile }) => (
   <div className="home">
-    <Header />
-    <Footer isMobile={isMobile} />
+    <Profile />
+    <Location />
+    <Info />
+    <Contact isMobile={isMobile} />
   </div>
 );
 
