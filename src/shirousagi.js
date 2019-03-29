@@ -285,7 +285,7 @@ async function rain(message) {
 
 async function intro() {
   setUp();
-  const message = 'WELCOME, FRIEND';
+  const message = 'WELCOME, VISITOR';
   await rain(message);
 }
 
