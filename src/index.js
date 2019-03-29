@@ -19,7 +19,7 @@ const preloadImages = () => {
 };
 
 (async () => {
-  const isRoot = window.location.pathname === '/';
+  const isRoot = window.location.hash === '';
 
   if (isRoot) {
     preloadImages();
