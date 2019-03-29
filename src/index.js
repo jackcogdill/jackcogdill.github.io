@@ -19,8 +19,12 @@ const preloadImages = () => {
 };
 
 (async () => {
-  preloadImages();
-  await Shirousagi.intro();
+  const isRoot = window.location.pathname === '/';
+
+  if (isRoot) {
+    preloadImages();
+    await Shirousagi.intro();
+  }
 
   // Start React
   const root = document.getElementById('root');
@@ -28,5 +32,7 @@ const preloadImages = () => {
   ReactDOM.render(<App />, root);
   registerServiceWorker();
 
-  Shirousagi.outro();
+  if (isRoot) {
+    Shirousagi.outro();
+  }
 })();
