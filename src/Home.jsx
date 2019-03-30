@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './Home.css';
-import FancyHeader from './FancyHeader';
 import Headshot from './images/closeup.jpg';
 import Resume from './files/cv.pdf';
 
@@ -61,11 +59,13 @@ const Info = () => (
   </div>
 );
 
-const Contact = ({ isMobile }) => (
+const Contact = () => (
   <div className="contact">
-    <FancyHeader isMobile={isMobile}>
-      {"Let's get in touch!"}
-    </FancyHeader>
+    <div className="contact-header">
+      <div>
+        {"Let's get in touch!"}
+      </div>
+    </div>
     <div className="contact-links">
       <a href="mailto:hi@jackcogdill.com">
         Email
@@ -83,21 +83,13 @@ const Contact = ({ isMobile }) => (
   </div>
 );
 
-Contact.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
-};
-
-const Home = ({ isMobile }) => (
+const Home = () => (
   <div className="home">
     <Profile />
     <Location />
     <Info />
-    <Contact isMobile={isMobile} />
+    <Contact />
   </div>
 );
-
-Home.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
-};
 
 export default Home;

@@ -29,7 +29,7 @@
 }
 
 .profile-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 2px;
   margin: 2rem 0 0;
@@ -43,7 +43,6 @@
 
   .profile-title {
     text-align: center;
-    font-size: 2.5rem;
   }
 }
 
@@ -107,32 +106,48 @@
   text-align: center;
   display: grid;
   grid-gap: 1rem;
+  grid-template-columns: repeat(2, auto);
+  align-items: center; /* Vertical */
+}
+
+.contact-header {
+  border: 2px solid #00ff80;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  margin: 0 auto;
+}
+
+.contact-header > div {
+  color: #00ff80;
+  font-size: 1.5rem;
+  margin: auto;
 }
 
 .contact-links {
-  justify-self: center;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 2.5rem;
-}
-
-.contact-credits {
-  display: inline-block;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-  .contact {
-    grid-template-columns: none;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .contact-links {
-    grid-template-columns: repeat(2, auto);
-  }
+  grid-gap: 1rem;
+  text-align: left;
 }
 
 .contact-links > a {
   border: none;
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    margin: 1rem auto;
+  }
+
+  .contact {
+    grid-template-columns: none;
+    grid-gap: 2rem;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1rem;
+    text-align: center;
+  }
 }
