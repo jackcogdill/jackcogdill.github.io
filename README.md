@@ -8,7 +8,7 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 
 ## Todo
 
-- [ ] Use font awesome for location icon (map-marker-alt)
+- [x] Use font awesome for location icon (map-marker-alt)
 
 - [x] Set up to use [Github Pages](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages)
 - [x] Abstract header and footer
