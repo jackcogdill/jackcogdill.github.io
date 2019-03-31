@@ -20,21 +20,28 @@ const Profile = () => (
   </div>
 );
 
+const locations = {
+  Charlotte: 'https://www.google.com/maps/place/Charlotte,+NC',
+  Blacksburg: 'https://www.google.com/maps/place/Blacksburg,+VA',
+  'Mountain View': 'https://www.google.com/maps/place/Mountain+View,+CA',
+};
+
 const Location = () => (
   <div className="location">
     <div className="location-marker">
       <FontAwesomeIcon icon="map-marker-alt" color="#ff007f" />
     </div>
-    <div className="locations">
-      <div>
-        Charlotte
-      </div>
-      <div>
-        Blacksburg
-      </div>
-      <div>
-        Mountain View
-      </div>
+    <div className="location-links">
+      {
+        Object.entries(locations)
+          .map(([loc, link]) => (
+            <div className="location-link">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                {loc}
+              </a>
+            </div>
+          ))
+      }
     </div>
   </div>
 );

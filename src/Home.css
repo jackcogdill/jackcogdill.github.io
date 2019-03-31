@@ -65,19 +65,26 @@
   font-size: 4rem;
 }
 
-.locations {
+.location-links {
   font-size: 1.5rem;
   margin: auto;
 }
 
-.locations > div {
-  text-decoration: line-through;
+.location-link {
   color: gray;
 }
 
-.locations > div:last-child {
-  text-decoration: none;
+.location-link:last-child {
   color: inherit;
+}
+
+.location-link > a {
+  text-decoration: line-through;
+  border: none;
+}
+
+.location-link:last-child > a {
+  text-decoration: none;
 }
 
 /* ================================ */
