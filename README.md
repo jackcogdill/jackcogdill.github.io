@@ -9,6 +9,7 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 ## Todo
 
 - [ ] Add yellow circles in the background?
+    - [ ] Perhaps as the user moves mouse on desktop or scrolls on mobile, explode circle
 
 - [x] Use font awesome for location icon (map-marker-alt)
 
