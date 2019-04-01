@@ -8,6 +8,8 @@ Background from [Subtle Patterns](https://www.toptal.com/designers/subtlepattern
 
 ## Todo
 
+- [ ] Add very small footer with link to source code
+
 - [ ] Add yellow circles in the background?
     - [ ] Perhaps as the user moves mouse on desktop or scrolls on mobile, explode circle
 
