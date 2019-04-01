@@ -21,6 +21,8 @@ const Profile = () => (
   </div>
 );
 
+// ================================
+
 const LocationLink = ({ text, href }) => (
   <div className="location-link">
     <a href={href} target="_blank" rel="noopener noreferrer">
@@ -47,6 +49,8 @@ const Location = () => (
   </div>
 );
 
+// ================================
+
 const Info = () => (
   <div className="info">
     <div className="info-description">
@@ -66,6 +70,8 @@ const Info = () => (
     </div>
   </div>
 );
+
+// ================================
 
 const ContactLink = ({ text, href, external }) => (
   <div className="contact-link">
@@ -110,6 +116,8 @@ const Contact = () => (
     </div>
   </div>
 );
+
+// ================================
 
 const Home = () => (
   <div className="home">
