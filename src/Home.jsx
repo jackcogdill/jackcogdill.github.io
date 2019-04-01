@@ -74,7 +74,7 @@ const ContactLink = ({ text, href, external }) => (
         <a href={href} target="_blank" rel="noopener noreferrer">
           {text}
           {' '}
-          <FontAwesomeIcon icon="external-link-alt" />
+          <FontAwesomeIcon icon="angle-right" />
         </a>
       ) : (
         <a href={href}>
