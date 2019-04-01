@@ -21,10 +21,17 @@ const Profile = () => (
   </div>
 );
 
-const locations = {
-  Charlotte: 'https://www.google.com/maps/place/Charlotte,+NC',
-  Blacksburg: 'https://www.google.com/maps/place/Blacksburg,+VA',
-  'Mountain View': 'https://www.google.com/maps/place/Mountain+View,+CA',
+const LocationLink = ({ text, href }) => (
+  <div className="location-link">
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {text}
+    </a>
+  </div>
+);
+
+LocationLink.propTypes = {
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
 };
 
 const Location = () => (
@@ -33,16 +40,9 @@ const Location = () => (
       <FontAwesomeIcon icon="map-marker-alt" color="#ff007f" />
     </div>
     <div className="location-links">
-      {
-        Object.entries(locations)
-          .map(([loc, link]) => (
-            <div className="location-link">
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                {loc}
-              </a>
-            </div>
-          ))
-      }
+      <LocationLink text="Charlotte" href="https://www.google.com/maps/place/Charlotte,+NC" />
+      <LocationLink text="Blacksburg" href="https://www.google.com/maps/place/Blacksburg,+VA" />
+      <LocationLink text="Mountain View" href="https://www.google.com/maps/place/Mountain+View,+CA" />
     </div>
   </div>
 );
