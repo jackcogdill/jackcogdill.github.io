@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -66,11 +67,32 @@ const Info = () => (
   </div>
 );
 
-const contacts = {
-  Email: 'mailto:hi@jackcogdill.com',
-  Resume,
-  Github: 'https://github.com/jackcogdill',
-  Instagram: 'https://www.instagram.com/jackcogdill/',
+const ContactLink = ({ text, href, external }) => (
+  <div className="contact-link">
+    {
+      external ? (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {text}
+          {' '}
+          <FontAwesomeIcon icon="external-link-alt" />
+        </a>
+      ) : (
+        <a href={href}>
+          {text}
+        </a>
+      )
+    }
+  </div>
+);
+
+ContactLink.propTypes = {
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  external: PropTypes.bool,
+};
+
+ContactLink.defaultProps = {
+  external: false,
 };
 
 const Contact = () => (
@@ -81,16 +103,10 @@ const Contact = () => (
       </div>
     </div>
     <div className="contact-links">
-      {
-        Object.entries(contacts)
-          .map(([name, link]) => (
-            <div className="contact-link">
-              <a href={link}>
-                {name}
-              </a>
-            </div>
-          ))
-      }
+      <ContactLink text="Email" href="mailto:hi@jackcogdill.com" />
+      <ContactLink text="Resume" href={Resume} />
+      <ContactLink external text="Github" href="https://github.com/jackcogdill" />
+      <ContactLink external text="Instagram" href="https://www.instagram.com/jackcogdill/" />
     </div>
   </div>
 );
