@@ -66,6 +66,13 @@ const Info = () => (
   </div>
 );
 
+const contacts = {
+  Email: 'mailto:hi@jackcogdill.com',
+  Resume,
+  Github: 'https://github.com/jackcogdill',
+  Instagram: 'https://www.instagram.com/jackcogdill/',
+};
+
 const Contact = () => (
   <div className="contact">
     <div className="contact-header">
@@ -74,18 +81,16 @@ const Contact = () => (
       </div>
     </div>
     <div className="contact-links">
-      <a href="mailto:hi@jackcogdill.com">
-        Email
-      </a>
-      <a href="https://github.com/jackcogdill">
-        Github
-      </a>
-      <a href={Resume}>
-        Resume
-      </a>
-      <a href="https://www.instagram.com/jackcogdill/">
-        Instagram
-      </a>
+      {
+        Object.entries(contacts)
+          .map(([name, link]) => (
+            <div className="contact-link">
+              <a href={link}>
+                {name}
+              </a>
+            </div>
+          ))
+      }
     </div>
   </div>
 );
