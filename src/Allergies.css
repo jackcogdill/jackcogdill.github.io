@@ -1,4 +1,19 @@
-.markdown {
+.allergies {
+  position: relative;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 3rem;
+}
+
+.back {
+  position: absolute;
+  left: -3rem;
+  top: 10%;
+  font-size: 3rem;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .back {
+    display: none;
+  }
 }
