@@ -104,9 +104,10 @@ ContactLink.defaultProps = {
 const Contact = () => (
   <div className="contact">
     <div className="contact-header">
-      <div>
-        {"Let's get in touch!"}
+      <div className="contact-text">
+        {"Let's get in touch."}
       </div>
+      <FontAwesomeIcon icon={['far', 'paper-plane']} className="contact-icon" />
     </div>
     <div className="contact-links">
       <ContactLink text="Email" href="mailto:hi@jackcogdill.com" />

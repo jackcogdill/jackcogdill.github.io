@@ -118,18 +118,20 @@
 }
 
 .contact-header {
-  border: 2px solid #00ff80;
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  display: grid;
   margin: 0 auto;
+  color: #00ff80;
 }
 
-.contact-header > div {
-  color: #00ff80;
+.contact-text {
+  position: relative;
   font-size: 1.5rem;
-  margin: auto;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  transform: rotate(27deg);
+  float: right;
+  margin-right: 1rem;
 }
 
 .contact-links {
