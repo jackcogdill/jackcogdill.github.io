@@ -23,13 +23,11 @@ class Allergies extends Component {
   render() {
     const { markdown } = this.state;
     return (
-      <div className="allergies">
-        <ReactMarkdown
-          source={markdown}
-          escapeHtml={false}
-          className="markdown"
-        />
-      </div>
+      <ReactMarkdown
+        source={markdown}
+        escapeHtml={false}
+        className="markdown"
+      />
     );
   }
 }
