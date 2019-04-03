@@ -79,8 +79,6 @@ const ContactLink = ({ text, href, external }) => (
       external ? (
         <a href={href} target="_blank" rel="noopener noreferrer">
           {text}
-          {' '}
-          <FontAwesomeIcon icon="angle-right" />
         </a>
       ) : (
         <a href={href}>
@@ -112,8 +110,8 @@ const Contact = () => (
     <div className="contact-links">
       <ContactLink text="Email" href="mailto:hi@jackcogdill.com" />
       <ContactLink external text="Resume" href={Resume} />
-      <ContactLink external text="GitHub" href="https://github.com/jackcogdill" />
-      <ContactLink external text="LinkedIn" href="https://www.linkedin.com/in/jackcogdill/" />
+      <ContactLink external text="Github" href="https://github.com/jackcogdill" />
+      <ContactLink external text="Linkedin" href="https://www.linkedin.com/in/jackcogdill/" />
       <ContactLink external text="Instagram" href="https://www.instagram.com/jackcogdill/" />
     </div>
   </div>
