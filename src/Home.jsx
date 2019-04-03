@@ -111,7 +111,7 @@ const Contact = () => (
     </div>
     <div className="contact-links">
       <ContactLink text="Email" href="mailto:hi@jackcogdill.com" />
-      <ContactLink text="Resume" href={Resume} />
+      <ContactLink external text="Resume" href={Resume} />
       <ContactLink external text="Github" href="https://github.com/jackcogdill" />
       <ContactLink external text="LinkedIn" href="https://www.linkedin.com/in/jackcogdill/" />
       <ContactLink external text="Instagram" href="https://www.instagram.com/jackcogdill/" />
