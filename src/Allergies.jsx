@@ -14,7 +14,10 @@ class Allergies extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    // https://reactjs.org/docs/react-component.html#componentdidmount
+    // "If you need to load data from a remote endpoint, this is a good place
+    // to instantiate the network request."
     fetch(Markdown)
       .then(res => res.text())
       .then(raw => this.setState({
@@ -24,6 +27,11 @@ class Allergies extends Component {
 
   render() {
     const { markdown } = this.state;
+
+    if (markdown == null) {
+      return null;
+    }
+
     return (
       <div className="allergies">
         <Link to="/" className="back">
