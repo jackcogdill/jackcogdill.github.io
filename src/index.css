@@ -1,17 +1,17 @@
 html, body {
   margin: 0;
-  padding: 0;
   height: 100%;
   background: black;
+  overflow: auto;
+  /* Re-enable inertia scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 #introCanvas {
-  z-index: 9999;
+  z-index: 1;
   position: absolute;
 }
 
 #root {
-  display: none;
-  width: 100%;
   height: 100%;
 }

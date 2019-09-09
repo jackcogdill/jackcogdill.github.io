@@ -19,22 +19,21 @@ const preloadImages = () => {
 };
 
 (async () => {
-  const isRoot = (
+  const isHome = (
     window.location.hash === '' ||
     window.location.hash === '#/');
 
-  if (isRoot) {
+  if (isHome) {
     preloadImages();
     await Shirousagi.intro();
   }
 
   // Start React
   const root = document.getElementById('root');
-  root.style.display = 'block';
   ReactDOM.render(<App />, root);
   registerServiceWorker();
 
-  if (isRoot) {
+  if (isHome) {
     Shirousagi.outro();
   }
 })();
