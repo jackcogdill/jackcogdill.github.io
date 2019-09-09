@@ -49,7 +49,7 @@ function sleep(ms) {
 
 // Main functions
 // ================================
-function setUp() {
+function setup() {
   const canvas = document.getElementById('introCanvas');
 
   window.width = window.innerWidth;
@@ -57,8 +57,6 @@ function setUp() {
   window.ctx = canvas.getContext('2d');
 
   const { width, height, ctx } = window;
-
-  window.isMobile = width <= 768;
 
   // Modify canvas to be high DPI
   // Lovingly adapted from http://stackoverflow.com/a/15666143/1313757
@@ -284,7 +282,7 @@ async function rain(message) {
 }
 
 async function intro() {
-  setUp();
+  setup();
   const message = 'WELCOME, VISITOR';
   await rain(message);
 }
