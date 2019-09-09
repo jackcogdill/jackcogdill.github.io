@@ -21,8 +21,8 @@
 .profile-image {
   border: 2px solid #007fff;
   border-radius: 50%;
-  width: 20vw;
-  height: 20vw;
+  width: 16rem;
+  height: 16rem;
   background: no-repeat center center;
   background-size: cover;
   justify-self: center;
@@ -36,20 +36,8 @@
 }
 
 @media (max-width: 768px) {
-  .profile-image {
-    width: 40vw;
-    height: 40vw;
-  }
-
   .profile-title {
     text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .profile-image {
-    width: 60vw;
-    height: 60vw;
   }
 }
 
