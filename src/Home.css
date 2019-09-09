@@ -1,13 +1,13 @@
 .home {
   display: grid;
   padding: 4rem 10%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
 
 @media (max-width: 768px) {
   .home {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-gap: 3rem;
   }
 }
