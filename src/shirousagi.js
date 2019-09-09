@@ -1,8 +1,11 @@
 // Util functions
 // ================================
 const randInt = (min, max) => min + Math.floor(Math.random() * (max - min));
-
 const choice = str => str.charAt(randInt(0, str.length));
+
+let width = 0;
+let height = 0;
+let ctx = null;
 
 function animate(innerFunction, baseCase, fps) {
   let loop;
@@ -52,11 +55,10 @@ function sleep(ms) {
 function setup() {
   const canvas = document.getElementById('introCanvas');
 
-  window.width = window.innerWidth;
-  window.height = window.innerHeight;
-  window.ctx = canvas.getContext('2d');
-
-  const { width, height, ctx } = window;
+  // Thank you https://gist.github.com/Linrstudio/7236158c6c8d8103b9fb
+  width = document.documentElement.clientWidth;
+  height = document.documentElement.clientHeight;
+  ctx = canvas.getContext('2d');
 
   // Modify canvas to be high DPI
   // Lovingly adapted from http://stackoverflow.com/a/15666143/1313757
@@ -77,10 +79,6 @@ function setup() {
 }
 
 async function rain(message) {
-  // Global vars
-  // ================================
-  const { width, height, ctx } = window;
-
   // Misc constants
   // ================================
   const alpha = '0123456789ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ';
@@ -290,12 +288,12 @@ async function intro() {
 async function outro() {
   const canvas = document.getElementById('introCanvas');
 
-  // Fade
-  const seconds = 1;
-  canvas.style.transition = `opacity ${seconds}s ease-in-out`;
+  const fadeTime = 1000; // ms
+  canvas.style.transition = `opacity ${fadeTime}ms ease-in-out`;
   canvas.style.opacity = 0;
-  await sleep(seconds * 1000);
 
+  // Give the CSS transition some extra time to finish just in case
+  await sleep(fadeTime + 200);
   document.body.removeChild(canvas);
 }
 
