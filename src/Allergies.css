@@ -1,19 +1,19 @@
-.allergies {
+.content {
   position: relative;
-  margin: auto;
   padding: 2rem 3rem;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .back {
-  position: absolute;
-  left: -3rem;
-  top: 10%;
-  font-size: 3rem;
   border: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .back {
-    display: none;
-  }
+.back .icon {
+  font-size: 2rem;
+  margin-right: 1rem;
 }

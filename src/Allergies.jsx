@@ -33,14 +33,17 @@ class Allergies extends Component {
     }
 
     return (
-      <div className="allergies">
+      <div className="content">
         <Link to="/" className="back">
-          <FontAwesomeIcon icon="angle-left" />
+          <FontAwesomeIcon icon="angle-left" className="icon" />
+          home
         </Link>
-        <ReactMarkdown
-          source={markdown}
-          escapeHtml={false}
-        />
+        <div>
+          <ReactMarkdown
+            source={markdown}
+            escapeHtml={false}
+          />
+        </div>
       </div>
     );
   }
