@@ -294,7 +294,7 @@ async function outro() {
 
   // Give the CSS transition some extra time to finish just in case
   await sleep(fadeTime + 200);
-  document.body.removeChild(canvas);
+  canvas.parentNode.removeChild(canvas);
 }
 
 export default { intro, outro };
