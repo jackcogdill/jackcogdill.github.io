@@ -11,10 +11,11 @@
 - Bell peppers, paprika
 - Zucchini
 - Squash
+- Eggplant
 
 ## Food that is OK
 
 1. Almonds, coconut
-2. Japchae
+2. Japchae, potato starch
 3. Soy
 4. Shrimp
