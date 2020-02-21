@@ -6,20 +6,14 @@ import registerServiceWorker from './registerServiceWorker';
 import Shirousagi from './shirousagi';
 
 (async () => {
-  const isHome = (
-    window.location.hash === '' ||
-    window.location.hash === '#/');
+  const isHome = ['', '#/', '#/home'].includes(window.location.hash);
 
-  if (isHome) {
-    await Shirousagi.intro();
-  }
+  if (isHome) await Shirousagi.intro();
 
   // Start React
   const root = document.getElementById('root');
   ReactDOM.render(<App />, root);
   registerServiceWorker();
 
-  if (isHome) {
-    Shirousagi.outro();
-  }
+  if (isHome) Shirousagi.outro();
 })();

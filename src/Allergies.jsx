@@ -34,7 +34,7 @@ class Allergies extends Component {
 
     return (
       <div className="content">
-        <Link to="/" className="back">
+        <Link to="/home" className="back">
           <FontAwesomeIcon icon="angle-left" className="icon" />
           home
         </Link>
