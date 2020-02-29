@@ -76,6 +76,8 @@ function setup() {
   canvas.style.width = `${width}px`;
   canvas.style.height = `${height}px`;
   ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+  canvas.style.display = 'block';
 }
 
 async function rain(message) {

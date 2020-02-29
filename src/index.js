@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Shirousagi from './shirousagi';
 
 (async () => {
-  const isHome = ['', '#/', '#/home'].includes(window.location.hash);
+  const isHome = ['', '#/'].includes(window.location.hash);
 
   if (isHome) await Shirousagi.intro();
 
