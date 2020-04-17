@@ -44,7 +44,7 @@ const Location = () => (
     <div className="location-links">
       <LocationLink text="Charlotte" href="https://www.google.com/maps/place/Charlotte,+NC" />
       <LocationLink text="Blacksburg" href="https://www.google.com/maps/place/Blacksburg,+VA" />
-      <LocationLink text="Cupertino" href="https://www.google.com/maps/place/Cupertino,+CA" />
+      <LocationLink text="Bay Area" href="https://www.google.com/maps/place/San+Francisco+Bay+Area,+CA" />
     </div>
   </div>
 );
