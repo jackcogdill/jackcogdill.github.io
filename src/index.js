@@ -7,7 +7,6 @@ import Shirousagi from './shirousagi';
 
 (async () => {
   const isHome = ['', '#/'].includes(window.location.hash);
-
   if (isHome) await Shirousagi.intro();
 
   // Start React

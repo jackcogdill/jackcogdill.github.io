@@ -1,3 +1,8 @@
+import anime from 'animejs/lib/anime.es';
+
+// Global vars
+const canvas = document.querySelector('#introCanvas');
+
 // Util functions
 // ================================
 const randInt = (min, max) => min + Math.floor(Math.random() * (max - min));
@@ -46,15 +51,9 @@ function animate(innerFunction, baseCase, fps) {
   return new Promise(resolve => loop(resolve));
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 // Main functions
 // ================================
 function setup() {
-  const canvas = document.getElementById('introCanvas');
-
   // Thank you https://gist.github.com/Linrstudio/7236158c6c8d8103b9fb
   width = document.documentElement.clientWidth;
   height = document.documentElement.clientHeight;
@@ -281,21 +280,22 @@ async function rain(message) {
   drawBackground('black');
 }
 
-async function intro() {
+function intro() {
   setup();
   const message = 'WELCOME, VISITOR';
-  await rain(message);
+  return rain(message);
 }
 
 async function outro() {
-  const canvas = document.getElementById('introCanvas');
+  const animation = anime({
+    targets: canvas,
+    opacity: 0,
+    duration: 1000,
+    easing: 'easeOutSine',
+  });
 
-  const fadeTime = 1000; // ms
-  canvas.style.transition = `opacity ${fadeTime}ms ease-in-out`;
-  canvas.style.opacity = 0;
-
-  // Give the CSS transition some extra time to finish just in case
-  await sleep(fadeTime + 200);
+  animation.play();
+  await animation.finished;
   canvas.parentNode.removeChild(canvas);
 }
 
