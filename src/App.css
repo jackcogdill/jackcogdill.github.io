@@ -20,7 +20,7 @@ a:hover, a:active {
 
 ::selection {
   background: rgba(0, 0, 0, 0.5);
-  color: var(--green);
+  color: var(--blue);
 }
 
 .App {
