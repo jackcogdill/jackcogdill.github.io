@@ -13,7 +13,10 @@ const A = ({ children, ...props }) => (
 );
 
 A.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]).isRequired,
 };
 
 const Photo = () => (
