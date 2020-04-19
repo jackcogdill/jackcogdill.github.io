@@ -72,7 +72,7 @@ const About = () => (
       me; happy to chat about books, anime, philosophy, or anything else really.
     </p>
     <p>
-      Other links:
+      More links:
     </p>
     <div className="contact-links">
       <A href={Resume}>
