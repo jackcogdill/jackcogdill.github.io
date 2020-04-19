@@ -69,7 +69,7 @@ const About = () => (
         email
       </A>
       {' '}
-      me; happy to chat about books, anime, or anything else really.
+      me; happy to chat about books, anime, philosophy, or anything else really.
     </p>
     <p>
       Other links:
