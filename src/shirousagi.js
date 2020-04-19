@@ -290,7 +290,7 @@ async function outro() {
   const animation = anime({
     targets: canvas,
     opacity: 0,
-    duration: 1000,
+    duration: 1500,
     easing: 'easeOutSine',
   });
 

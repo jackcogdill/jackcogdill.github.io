@@ -31,7 +31,7 @@ const Photo = () => (
 const About = () => (
   <div className="about">
     <p>
-      Hi!
+      Hi there!
     </p>
     <p>
       I am a recent graduate of
@@ -69,7 +69,10 @@ const About = () => (
         email
       </A>
       {' '}
-      me and/or check out the links below.
+      me; happy to chat about anything.
+    </p>
+    <p>
+      Other links:
     </p>
     <div className="contact-links">
       <A href={Resume}>
