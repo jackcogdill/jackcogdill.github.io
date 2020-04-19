@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 import './Allergies.css';
@@ -34,11 +33,10 @@ class Allergies extends Component {
 
     return (
       <div className="content">
-        <Link to="/" className="back">
-          <FontAwesomeIcon icon="angle-left" className="icon" />
-          home
+        <Link to="/">
+          {'❮ home'}
         </Link>
-        <div>
+        <div className="markdown">
           <ReactMarkdown
             source={markdown}
             escapeHtml={false}

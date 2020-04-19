@@ -1,150 +1,34 @@
 .home {
   display: grid;
   padding: 4rem 10%;
-  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  grid-auto-flow: row;
   grid-gap: 2rem;
+  max-width: 30rem;
 }
 
-@media (max-width: 768px) {
-  .home {
-    grid-template-columns: 1fr;
-    grid-gap: 3rem;
-  }
+.about {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1.5rem;
 }
 
-/* ================================ */
-
-.profile-image-wrapper {
+.photo {
   display: grid;
 }
 
-.profile-image {
+.photo-image {
   border: 2px solid #007fff;
   border-radius: 50%;
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   background: no-repeat center center;
   background-size: cover;
   justify-self: center;
 }
 
-.profile-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin: 2rem 0 0;
-}
-
-@media (max-width: 768px) {
-  .profile-title {
-    text-align: center;
-  }
-}
-
-/* ================================ */
-
-.location {
-  margin: auto;
-  display: grid;
-  grid-template-columns: 4rem auto;
-}
-
-.location-marker {
-  font-size: 4rem;
-}
-
-.location-links {
-  font-size: 1.5rem;
-  margin: auto;
-}
-
-.location-link {
-  color: gray;
-}
-
-.location-link:last-child {
-  color: inherit;
-}
-
-.location-link > a {
-  text-decoration: line-through;
-  border: none;
-}
-
-.location-link:last-child > a {
-  text-decoration: none;
-}
-
-/* ================================ */
-
-.info-description {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  line-height: 1.5em;
-}
-
-.info-arrow {
-  font-size: 4rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  cursor: pointer;
-  outline: none;
-  transition: opacity 0.25s ease-in-out;
-}
-
-/* ================================ */
-
-.contact {
-  font-size: 1.1rem;
-  text-align: center;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(2, auto);
-  align-items: center; /* Vertical */
-}
-
-.contact-header {
-  margin: 0 auto;
-  color: #00ff80;
-}
-
-.contact-text {
-  position: relative;
-  font-size: 1.5rem;
-}
-
-.contact-icon {
-  font-size: 2rem;
-  transform: rotate(27deg);
-  float: right;
-  margin-right: 1rem;
-}
-
 .contact-links {
   display: grid;
-  grid-gap: 1rem;
-  text-align: left;
-}
-
-.contact-link > a {
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .contact-header {
-    margin: 1rem auto;
-  }
-
-  .contact {
-    grid-template-columns: none;
-    grid-gap: 2rem;
-  }
-
-  .contact-links {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem 1rem;
-    text-align: center;
-  }
+  grid-auto-flow: column;
+  text-align: center;
 }

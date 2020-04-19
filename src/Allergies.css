@@ -6,14 +6,7 @@
   justify-items: center;
 }
 
-.back {
-  border: none;
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-}
-
-.back .icon {
-  font-size: 2rem;
-  margin-right: 1rem;
+.markdown {
+  /* normalize since ReactMarkdown appears to use em */
+  font-size: 1rem;
 }
