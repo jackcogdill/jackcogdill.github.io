@@ -1,6 +1,6 @@
 #! /bin/bash
-pushd $(dirname "$0")
 
+cd $(dirname "$0")
 OUT="src/files"
 
 # Update allergies
@@ -18,5 +18,3 @@ rm "${OUT}/texput.log"
 
 # Set files to read only
 chmod 555 "${OUT}"/*
-
-popd
