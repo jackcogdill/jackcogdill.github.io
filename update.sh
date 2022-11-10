@@ -15,6 +15,3 @@ rm "${OUT}/cv.aux"
 rm "${OUT}/cv.log"
 rm "${OUT}/cv.out"
 rm "${OUT}/texput.log"
-
-# Set files to read only
-chmod 555 "${OUT}"/*
